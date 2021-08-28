@@ -16,12 +16,12 @@ todayCell = sheet.find(date)
 
 meal = input('Frukost?:')
 edit = True
-if sheet.cell(todayCell.row, 2).value != "":
-    edit = False
-    overwrite = input('Vill du skriva över ' + "'" +
-                      sheet.cell(todayCell.row, 2).value + "'? y/n: ")
-    if overwrite == 'y':
-        edit = True
+val = str(sheet.cell(todayCell.row, 2).value)
+if val != "None":
+    overwrite = str(input('Vill du skriva över ' + "'" +
+                          val + "'? y/n: "))
+    if overwrite != 'y':
+        edit = False
 if edit == True:
     if '-r' in meal:
         meal = meal.replace('-r', '')
@@ -37,12 +37,12 @@ if edit == True:
 
 meal = input('Lunch?:')
 edit = True
-if sheet.cell(todayCell.row, 3).value != "":
-    edit = False
-    overwrite = input('Vill du skriva över ' + "'" +
-                      sheet.cell(todayCell.row, 3).value + "'? y/n: ")
-    if overwrite == 'y':
-        edit = True
+val = str(sheet.cell(todayCell.row, 3).value)
+if val != "None":
+    overwrite = str(input('Vill du skriva över ' + "'" +
+                          val + "'? y/n: "))
+    if overwrite != 'y':
+        edit = False
 if edit == True:
     if '-r' in meal:
         meal = meal.replace('-r', '')
@@ -58,12 +58,12 @@ if edit == True:
 
 meal = input('Kvällsmat?:')
 edit = True
-if sheet.cell(todayCell.row, 4).value != "":
-    edit = False
-    overwrite = input('Vill du skriva över ' + "'" +
-                      sheet.cell(todayCell.row, 4).value + "'? y/n: ")
-    if overwrite == 'y':
-        edit = True
+val = str(sheet.cell(todayCell.row, 4).value)
+if val != 'None':
+    overwrite = str(input('Vill du skriva över ' + "'" +
+                          val + "'? y/n: "))
+    if overwrite != 'y':
+        edit = False
 if edit == True:
     if '-r' in meal:
         meal = meal.replace('-r', '')
